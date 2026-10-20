@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<!-- LOVE CLOUD TEDDY 5.2: cần 1.webp … 18.webp, nhac.mp3; QR mới tùy chọn. -->
+<!-- LOVE CLOUD TEDDY 5.5: cần 1.webp … 18.webp, nhac.mp3; QR mới tùy chọn. -->
 <html lang="vi">
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1"/>
-<title>Nguyễn Nam &amp; Thân Hiền | Love Cloud Teddy 5.2</title>
+<title>Nguyễn Nam &amp; Thân Hiền | Love Cloud Teddy 5.5</title>
 <meta name="theme-color" content="#fff0f8"/>
 <meta property="og:title" content="Nguyễn Nam & Thân Hiền – Wedding Invitation"/>
 <meta property="og:description" content="Trân trọng kính mời bạn tới chung vui cùng Nguyễn Nam & Thân Hiền"/>
@@ -14,7 +14,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=DM+Sans:wght@300;400;500;700&family=Great+Vibes&family=Playfair+Display:wght@400;600;700;800&display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600&family=Nunito:wght@400;500;600;700;800;900&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500;600;700&family=Fredoka:wght@400;500;600&family=Nunito:wght@400;500;600;700;800;900&display=swap" rel="stylesheet"/>
 <style>
 :root{
   --ivory:#fff9f4;
@@ -4015,11 +4015,318 @@ html[data-theme] #rsvpRoom .wish{background:#fff7fa!important;border:2px solid #
 #journeyRoom .j-item--final .j-final-end{color:#b789a1!important;letter-spacing:.06em!important}
 @media(max-width:380px){#journeyRoom .j-item--final .j-final-panel h3{font-size:clamp(1.9rem,9vw,2.4rem)!important}}
 
+
+/* RSVP is not the final page: make this continuation visible both before and after writing a wish. */
+.rsvp-preview-link{display:table;max-width:94%;margin:1.3rem auto .75rem;padding:.66rem 1.18rem;background:#fff6fc;border:2px dashed #ebb7d3;border-radius:999px;font:800 clamp(.7rem,1.75vw,.88rem)/1.6 'Nunito',sans-serif!important;text-decoration:none;color:#b36b99;box-shadow:0 7px 17px #eac7dd55;text-align:center;position:relative;z-index:6}
+.rsvp-preview-link span{display:inline-block;margin-left:.45rem;animation:inviteDown 1.8s ease-in-out infinite}
+.rsvp-preview-link:focus-visible{outline:3px solid #ff88b7;outline-offset:3px}
+body.invitation-open #hero .hero-photo-meta{opacity:1!important;transform:none!important;transition:opacity .25s ease!important}
+/* =========================================================
+   LOVE CLOUD 5.3 — comfortable interactions + sweet lettering
+   ========================================================= */
+:root{--wedding-calligraphy:'Dancing Script','Great Vibes',cursive}
+.sr-only{position:absolute!important;width:1px!important;height:1px!important;padding:0!important;margin:-1px!important;overflow:hidden!important;clip:rect(0,0,0,0)!important;white-space:nowrap!important;border:0!important}
+/* Trang bìa: chữ viết tay điệu đà nhưng không che cô dâu chú rể. */
+#hero .hero-name{
+ font-family:var(--wedding-calligraphy)!important;font-weight:600!important;
+ font-size:clamp(3.5rem,12vw,7.5rem)!important;
+ line-height:1.06!important;letter-spacing:-.025em!important;
+ text-wrap:balance;padding:.04em .10em .11em!important;
+ color:#fff7fa!important;text-shadow:0 3px 7px #50384da3,0 9px 22px #4930428f!important;
+}
+#hero .hero-title .hero-ampersand{font-family:'Great Vibes',var(--wedding-calligraphy)!important;font-size:clamp(3rem,8vw,5rem)!important;line-height:.65!important;margin:-.10em auto!important}
+#hero .hero-title{line-height:1!important}
+#hero .hero-desc{font-size:clamp(.95rem,2.7vw,1.1rem)!important}
+/* Gấu và tem dán đã chuyển lên vùng tối phía trên, không che mặt. */
+#hero .hero-plush{top:clamp(78px,10svh,125px)!important;right:clamp(19px,5vw,72px)!important;z-index:9}
+#hero .hero-plush .kawaii-character{width:clamp(47px,5vw,63px)!important;height:clamp(53px,6vw,70px)!important}
+#hero .hero-cute-tag{top:clamp(147px,18svh,190px)!important;right:clamp(8px,3vw,50px)!important;z-index:9;font-size:clamp(.58rem,1.4vw,.73rem)!important;max-width:150px;text-align:center}
+/* Ảnh bìa: khu vực nút tách bạch với overlay và đủ lớn cho ngón tay. */
+#hero .hero-photo-meta{z-index:180!important;pointer-events:none!important;bottom:clamp(18px,3svh,34px)!important;padding-top:12px!important;grid-template-columns:auto 1fr!important;gap:1rem!important}
+#hero .hero-controls{grid-column:2!important;display:flex!important;justify-content:flex-end!important;gap:clamp(8px,2vw,16px)!important;pointer-events:auto!important;position:relative;z-index:181!important}
+#hero .hero-control,#hero #heroNext,#hero #heroPrev{
+ width:auto!important;min-width:clamp(86px,19vw,121px)!important;
+ min-height:52px!important;height:52px!important;
+ display:flex!important;align-items:center!important;justify-content:center!important;gap:8px!important;
+ padding:0 12px!important;
+ background:#fff8fdF2!important;color:#b55d8b!important;
+ border:2px solid #fff!important;border-radius:999px!important;
+ box-shadow:0 6px 0 #d8a9c1a9,0 12px 24px #4b2e4b70!important;
+ font:900 clamp(.8rem,1.6vw,.95rem) 'Nunito',var(--sans)!important;
+ cursor:pointer!important;pointer-events:auto!important;touch-action:manipulation!important;
+ text-shadow:none!important;transition:transform .18s,box-shadow .18s!important;
+}
+#hero .hero-control span:first-child,#hero .hero-control span:last-child{display:inline!important}
+#hero .hero-control span[aria-hidden]{font-size:1.3rem!important;line-height:1!important}
+#hero .hero-control:active{transform:translateY(3px) scale(.98)!important;box-shadow:0 2px 0 #d8a9c1a9,0 5px 12px #4b2e4b70!important}
+#hero .hero-control:focus-visible,.robot-nav button:focus-visible,.robot-stage-arrow:focus-visible,.rsvp-keep-going:focus-visible{outline:3px solid #ff88b7!important;outline-offset:4px!important}
+#hero .hero-photo-counter{font-size:.8rem!important;color:#fff9fb!important}
+#hero .hero-photo-counter strong{color:#fff3f6!important;font-size:1.4rem!important}
+#hero .hero-progress-track{background:#ffffff72!important;top:-8px!important}
+/* Nút robot: hai nơi điều khiển, rõ chữ, luôn bắt được click. */
+.robotic-stage{position:relative!important}
+.robot-stage-arrow{position:absolute;top:49%;z-index:25;display:grid;place-items:center;
+ width:clamp(42px,5vw,53px);height:clamp(42px,5vw,53px);
+ border:3px solid white!important;border-radius:50%!important;
+ background:#fff4fbea!important;color:#ba6a99!important;
+ box-shadow:0 6px 20px #744b795c!important;font:900 1.45rem 'Nunito',sans-serif!important;
+ cursor:pointer;touch-action:manipulation;pointer-events:auto!important;transform:translateY(-50%);
+}
+.robot-stage-arrow--prev{left:clamp(5px,1.8vw,25px)}
+.robot-stage-arrow--next{right:clamp(5px,1.8vw,25px)}
+.robot-stage-arrow:active{transform:translateY(-50%) scale(.93)}
+.robot-nav{grid-template-columns:minmax(0,1fr) auto minmax(0,1fr)!important;gap:clamp(6px,1.4vw,16px)!important;padding:0 clamp(8px,2vw,28px)!important;position:relative;z-index:22!important}
+.robot-nav button,#robotPrev,#robotNext{position:relative;z-index:24!important;min-height:52px!important;padding:.7rem clamp(9px,2vw,17px)!important;border-radius:999px!important;background:linear-gradient(145deg,#ffedf6,#fbe4f3)!important;border:3px solid #fff!important;color:#a75a86!important;box-shadow:0 8px 17px #e9b1d454!important;font:900 clamp(.68rem,1.9vw,.95rem) 'Nunito',sans-serif!important;display:flex;align-items:center;justify-content:center;gap:.4rem!important;cursor:pointer!important;pointer-events:auto!important;touch-action:manipulation!important;white-space:nowrap}
+.robot-nav #robotNext{background:linear-gradient(140deg,#ed9cbe,#daafea)!important;color:#fff!important}
+.robot-nav button span{display:inline!important}
+.robot-nav button span[aria-hidden]{font-size:1.3rem!important;line-height:1!important}
+.robot-dots{max-width:110px!important;min-width:32px!important}
+.robotic-stage .robot-photo-frame{z-index:3}
+/* Tên khách và chữ tình yêu mềm hơn, chữ Việt hiển thị tự nhiên. */
+#museumDoor .md-names{font-family:var(--wedding-calligraphy)!important;font-weight:700!important;font-size:clamp(2.5rem,8vw,5.2rem)!important;line-height:1.25!important;letter-spacing:0!important}
+#lobby .ticket--pocket #guestName{font:700 clamp(2.15rem,7.8vw,3.7rem)/1.22 var(--wedding-calligraphy)!important;letter-spacing:0!important;color:#c674a3!important;margin:.18rem auto .26rem!important}
+#lobby .ticket--pocket .ticket-main{padding-bottom:1rem!important}
+#portraitRoom .plaque h3{font-family:var(--wedding-calligraphy)!important;font-size:clamp(1.25rem,3.8vw,2rem)!important;font-weight:700!important;line-height:1.18!important}
+#closing .close-names{font:700 clamp(2.15rem,6vw,4rem)/1.25 var(--wedding-calligraphy)!important;letter-spacing:0!important}
+#closing .close-names span{font-family:'Great Vibes',cursive!important}
+#bar .quick-guest{font-size:clamp(.55rem,1.5vw,.77rem)!important}
+/* Cuối lời chúc sẽ có biển chỉ đường xuống phong bì, không giống màn kết thúc. */
+.rsvp-keep-going{max-width:660px;margin:clamp(18px,4vw,32px) auto 0;padding:1rem 1.1rem;position:relative;z-index:8;display:flex;align-items:center;gap:clamp(9px,2vw,20px);background:linear-gradient(125deg,#fff5fa,#f7eaff);border:3px solid white;border-radius:35px;text-decoration:none;box-shadow:0 14px 32px #cfa6d35c;min-height:90px;transform-origin:center;color:#805c85}
+.rsvp-keep-icon{flex:none;display:grid;place-items:center;width:56px;height:56px;border-radius:21px;background:#fff;box-shadow:0 8px 15px #ead0e654;font-size:1.8rem;animation:rsvpNoteFloat 3s ease-in-out infinite}
+@keyframes rsvpNoteFloat{50%{transform:translateY(-6px) rotate(-6deg)}}
+.rsvp-keep-copy{display:grid;gap:.22rem;flex:1;min-width:0}
+.rsvp-keep-copy strong{font:700 clamp(1.4rem,3.8vw,2rem)/1.15 var(--wedding-calligraphy);color:#c47aa8}
+.rsvp-keep-copy small{font:700 clamp(.69rem,1.6vw,.86rem)/1.55 'Nunito',sans-serif;color:#997e9a}
+.rsvp-keep-arrow{flex:none;font-size:1.5rem;font-weight:900;background:#f4c1dd;border:2px solid white;border-radius:100%;color:#fff;display:grid;place-items:center;width:39px;height:39px;animation:inviteDown 1.75s ease-in-out infinite}
+@keyframes inviteDown{50%{transform:translateY(6px)}}
+.rsvp-keep-going:hover{box-shadow:0 17px 36px #cfa6d37a;transform:translateY(-2px)}
+/* Bóng bay trái tim trong suốt, lơ lửng rất nhẹ và không chặn tương tác. */
+.floating-heart-balloons{position:fixed;z-index:48;left:50%;transform:translateX(-50%);top:0;height:100dvh;width:min(100vw,1100px);overflow:hidden;pointer-events:none!important;user-select:none;contain:layout style}
+.floating-heart-balloons .love-air{position:absolute;bottom:-150px;display:block;width:clamp(36px,6vw,65px);height:auto;opacity:.52;animation:balloonRise var(--rise,22s) linear infinite;animation-delay:var(--delay,0s);filter:drop-shadow(0 2px 4px #ffd7ef48);will-change:transform,opacity}
+.love-air-1{left:2%;--rise:26s;--delay:-5s;--sway:40px}
+.love-air-2{left:21%;--rise:32s;--delay:-24s;--sway:-58px}
+.love-air-3{left:84%;--rise:29s;--delay:-12s;--sway:35px}
+.love-air-4{left:69%;--rise:35s;--delay:-29s;--sway:-35px}
+.love-air-5{left:42%;--rise:39s;--delay:-15s;--sway:26px}
+.love-air-6{left:92%;--rise:33s;--delay:-3s;--sway:-40px}
+@keyframes balloonRise{0%{transform:translate3d(0,0,0) rotate(-8deg);opacity:0}12%{opacity:.43}80%{opacity:.43}100%{transform:translate3d(var(--sway,35px),-125vh,0) rotate(9deg);opacity:0}}
+@media(min-width:800px){
+ #hero .hero-plush{top:clamp(125px,17vh,230px)!important;right:clamp(24px,3vw,100px)!important}
+ #hero .hero-cute-tag{top:clamp(218px,28vh,310px)!important;right:clamp(24px,3vw,100px)!important}
+ #hero .hero-photo-meta{left:clamp(30px,6vw,110px)!important;right:clamp(30px,6vw,110px)!important;bottom:clamp(22px,4vh,52px)!important}
+ #hero .hero-control{min-width:120px!important}
+ .robot-nav{max-width:720px;margin-inline:auto}
+}
+@media(max-width:599px){
+ #hero .hero-name{font-size:clamp(3.4rem,12.4vw,4.75rem)!important}
+ #hero .hero-card{bottom:clamp(6.85rem,15svh,9.6rem)!important}
+ #hero .hero-photo-meta{left:clamp(12px,4vw,24px)!important;right:clamp(12px,4vw,24px)!important}
+ #hero .hero-control,#hero #heroNext,#hero #heroPrev{min-width:79px!important;min-height:49px!important;height:49px!important;padding:0 9px!important;font-size:.79rem!important}
+ #hero .hero-plush{top:clamp(86px,11svh,110px)!important;right:clamp(18px,4vw,30px)!important}
+ #hero .hero-cute-tag{top:clamp(152px,19svh,178px)!important;right:clamp(8px,3vw,18px)!important}
+ .robot-nav{gap:6px!important;padding-inline:6px!important}
+ .robot-nav button,#robotPrev,#robotNext{min-height:47px!important;padding:.55rem 6px!important;font-size:.70rem!important;gap:3px!important}
+ .robot-dots{min-width:30px!important;max-width:54px!important}
+ .robot-stage-arrow{width:44px;height:44px}
+ .rsvp-keep-going{border-radius:27px;gap:.6rem;padding:.8rem}
+ .rsvp-keep-icon{width:42px;height:45px;font-size:1.5rem;border-radius:16px}
+ .rsvp-keep-arrow{width:32px;height:32px;font-size:1.05rem}
+ .floating-heart-balloons .love-air{width:36px;opacity:.35}
+}
+@media(max-width:355px){
+ #hero .hero-name{font-size:clamp(3rem,12vw,3.5rem)!important}
+ #hero .hero-controls{gap:5px!important}
+ #hero .hero-control,#hero #heroNext,#hero #heroPrev{min-width:73px!important;font-size:.71rem!important}
+ #hero .hero-photo-counter strong{font-size:1.15rem!important}
+ .robot-nav button,#robotPrev,#robotNext{font-size:.64rem!important}
+ .rsvp-keep-copy strong{font-size:1.22rem}
+}
+@media(prefers-reduced-motion:reduce){.floating-heart-balloons{display:none!important}.rsvp-keep-icon,.rsvp-keep-arrow{animation:none!important}}
+
+
+
+/* =========================================================
+   LOVE CLOUD 5.4 — larger handwritten invitation & airy balloons
+   ========================================================= */
+:root{--signature-font:'Dancing Script','Great Vibes',cursive}
+/* Keep the top-right announcement right at the top; preserve faces in portraits. */
+#hero .hero-edition{display:none!important}
+#hero .hero-cute-tag{
+  top:clamp(11px,1.6svh,20px)!important;
+  right:clamp(10px,2.5vw,30px)!important;
+  max-width:min(43vw,168px)!important;
+  font:850 clamp(.67rem,1.75vw,.9rem)/1.25 'Nunito',var(--sans)!important;
+  padding:.55rem .75rem!important;border:2px solid #fff9ff!important;
+  box-shadow:0 7px 20px #34213e60!important;
+  transform:rotate(4deg);
+  text-align:center!important;z-index:11!important;
+}
+#hero .hero-plush{top:clamp(76px,9.1svh,112px)!important;right:clamp(10px,3vw,30px)!important}
+#hero .hero-name{font-family:var(--signature-font)!important;font-size:clamp(3.75rem,12.6vw,7.6rem)!important;font-weight:700!important;letter-spacing:0!important;line-height:1.04!important}
+#hero .hero-title .hero-ampersand{font-size:clamp(3.15rem,8.3vw,5.4rem)!important}
+/* Ticket: charming hierarchy, not tiny administrative metadata. */
+#lobby .ticket--pocket .ticket-top{font-size:clamp(.56rem,1.85vw,.69rem)!important;letter-spacing:.045em!important;padding:1rem 1.05rem .44rem!important}
+#lobby .ticket--pocket .ticket-stamp{font-size:clamp(.55rem,1.68vw,.67rem)!important;white-space:normal!important;max-width:49%;line-height:1.35!important;text-align:center}
+#lobby .ticket--pocket .pocket-greeting{font-size:clamp(.7rem,2.05vw,.86rem)!important;letter-spacing:.09em!important;margin:.2rem auto .38rem!important}
+#lobby .ticket--pocket .ticket-label{font-size:clamp(.66rem,1.9vw,.82rem)!important;letter-spacing:.08em!important}
+#lobby .ticket--pocket #guestName{
+  font:700 clamp(2.85rem,10.2vw,4.5rem)/1.15 var(--signature-font)!important;
+  letter-spacing:0!important;color:#c15b95!important;
+  margin:.12rem auto .13rem!important;overflow-wrap:anywhere!important;
+  text-shadow:0 3px 0 #fff!important;
+}
+#lobby .ticket--pocket .ticket-text{font:750 clamp(.91rem,2.4vw,1.08rem)/1.5 'Nunito',var(--sans)!important;color:#80687f!important;margin:.22rem auto 0!important}
+#lobby .ticket--pocket .ticket-couple-names{
+  display:flex;justify-content:center;align-items:baseline;flex-wrap:wrap;column-gap:.37em;row-gap:0;
+  padding:.18rem .1rem .05rem;
+  font:700 clamp(1.8rem,6.9vw,2.85rem)/1.22 var(--signature-font)!important;
+  color:#c2679a!important;text-wrap:balance;
+}
+#lobby .ticket--pocket .ticket-couple-names em{font-family:'Great Vibes',var(--signature-font)!important;color:#e5a0bf;font-weight:400;font-style:normal}
+#lobby .ticket--pocket .ticket-couple-names i{font:800 .75em var(--signature-font)!important;color:#db8aab;font-style:normal}
+#lobby .ticket--pocket .ticket-main{padding:.2rem .82rem .78rem!important}
+#lobby .ticket--pocket .ticket-foot{gap:.4rem!important;margin:0 .9rem!important;padding:.75rem 0 .35rem!important;grid-template-columns:1.12fr .9fr!important}
+#lobby .ticket--pocket .ticket-foot b{font:900 clamp(.98rem,3.3vw,1.35rem)/1.38 'Nunito',var(--sans)!important;color:#886083!important;letter-spacing:-.025em}
+#lobby .ticket--pocket .ticket-foot span{font-size:clamp(.56rem,1.55vw,.7rem)!important;letter-spacing:.01em!important}
+#lobby .ticket--pocket .ticket-lunar{display:block;font:700 clamp(.59rem,1.75vw,.73rem)/1.5 'Nunito',sans-serif;color:#bf80a7;margin-top:.36rem}
+/* Handwritten couple identities outside the ticket as well. */
+#portraitRoom .plaque h3{font:700 clamp(1.47rem,5.1vw,2.6rem)/1.2 var(--signature-font)!important;color:#a8689b!important;white-space:normal!important}
+#giftRoom .gift-person h3{font:700 clamp(1.75rem,4.8vw,2.85rem)/1.28 var(--signature-font)!important;color:#a8689b!important}
+#closing .close-names{font:700 clamp(2.5rem,7.5vw,4.6rem)/1.25 var(--signature-font)!important}
+#dateRoom .date-cute-message small{font:750 clamp(.67rem,2vw,.82rem)/1.4 'Nunito',sans-serif!important;color:#b77d9e!important;letter-spacing:0!important}
+/* Balloon edges are lavender-blue rather than pale pink: still translucent, more legible over pastel. */
+.floating-heart-balloons .love-air{
+  width:clamp(42px,6.3vw,69px)!important;
+  filter:drop-shadow(0 3px 7px #7764ba70)!important;
+  animation-name:balloonRise54!important;
+  transform-origin:50% 48%;
+}
+.floating-heart-balloons .love-air:nth-child(3n+1){filter:hue-rotate(30deg) drop-shadow(0 4px 7px #7764ba69)!important}
+.floating-heart-balloons .love-air:nth-child(4n+2){filter:hue-rotate(-34deg) drop-shadow(0 4px 7px #9581bd64)!important}
+.love-air-7{left:12%;--rise:27s;--delay:-20s;--sway:23px}
+.love-air-8{left:34%;--rise:34s;--delay:-9s;--sway:-52px}
+.love-air-9{left:57%;--rise:31s;--delay:-23s;--sway:44px}
+.love-air-10{left:76%;--rise:28s;--delay:-18s;--sway:-31px}
+.love-air-11{left:96%;--rise:41s;--delay:-38s;--sway:-48px}
+.love-air-12{left:48%;--rise:36s;--delay:-33s;--sway:25px}
+.love-air-13{left:6%;--rise:37s;--delay:-28s;--sway:37px}
+@keyframes balloonRise54{
+  0%{transform:translate3d(0,0,0) rotate(-9deg);opacity:0}
+  9%{opacity:.73}
+  82%{opacity:.70}
+  100%{transform:translate3d(var(--sway,35px),-128vh,0) rotate(11deg);opacity:0}
+}
+@media(max-width:599px){
+  #hero .hero-cute-tag{top:clamp(11px,1.7svh,18px)!important;right:9px!important;max-width:135px!important;font-size:.68rem!important}
+  #hero .hero-plush{top:clamp(69px,8.2svh,96px)!important;right:12px!important}
+  #hero .hero-name{font-size:clamp(3.47rem,13vw,4.95rem)!important}
+  #lobby .ticket--pocket .ticket-top{padding:.86rem .82rem .36rem!important}
+  #lobby .ticket--pocket .ticket-main{padding:.18rem .72rem .62rem!important}
+  #lobby .ticket--pocket .ticket-foot{margin:0 .73rem!important}
+  #lobby .ticket--pocket .ticket-foot b{font-size:clamp(.90rem,3.1vw,1.1rem)!important}
+  #portraitRoom .plaque h3{font-size:clamp(1.45rem,5.4vw,2.05rem)!important}
+  .floating-heart-balloons .love-air{width:clamp(37px,11.5vw,52px)!important}
+}
+@media(max-width:355px){
+  #lobby .ticket--pocket #guestName{font-size:clamp(2.4rem,9.3vw,3.1rem)!important}
+  #lobby .ticket--pocket .ticket-couple-names{font-size:clamp(1.62rem,6.4vw,1.95rem)!important}
+  #lobby .ticket--pocket .ticket-top{font-size:.52rem!important}
+  #lobby .ticket--pocket .ticket-foot span{font-size:.53rem!important}
+  #lobby .ticket--pocket .ticket-foot b{font-size:.85rem!important}
+  #hero .hero-name{font-size:clamp(3.17rem,12.6vw,3.68rem)!important}
+}
+@media(prefers-reduced-motion:reduce){.floating-heart-balloons .love-air{animation:none!important;display:none!important}}
+
+
+/* ===========================================================
+   LOVE CLOUD TEDDY 5.5 · SMALL FINISHING TOUCHES ONLY
+   01. Transparent pearly-white heart balloons (original mood).
+   02. One unified wedding-name script, based on the invitation.
+   =========================================================== */
+:root{--couple-script-font:'Dancing Script','Great Vibes',cursive}
+.couple-script,
+#hero .hero-name.couple-script,
+#museumDoor .md-names .couple-script,
+#lobby .ticket--pocket .ticket-couple-names .couple-script,
+#portraitRoom .plaque h3.couple-script,
+#ceremonyRoom .cer-couple-name,
+#giftRoom .gift-person h3.couple-script,
+#closing .close-names .couple-script{
+  font-family:var(--couple-script-font)!important;
+  font-style:normal!important;
+  font-weight:700!important;
+  text-transform:none!important;
+  letter-spacing:0!important;
+  font-variant:normal!important;
+}
+/* Bride/groom plaques: handwritten names must be easily readable on small phones. */
+#portraitRoom .plaque h3.couple-script{
+  font-size:clamp(1.75rem,6vw,2.8rem)!important;
+  line-height:1.15!important;
+  overflow-wrap:normal;
+  text-shadow:0 1px 0 rgba(255,255,255,.85)!important;
+}
+/* The ceremonial address remains bold, only the person's name is handwritten. */
+#ceremonyRoom .cer-couple-name{
+  display:inline-block;
+  font-size:clamp(1.35rem,4vw,1.75rem)!important;
+  line-height:1.18!important;
+  vertical-align:baseline;
+  color:#bc6996!important;
+  white-space:nowrap;
+}
+#museumDoor .md-names .couple-script{
+  display:inline-block;
+  color:#c46f9c!important;
+  line-height:1.15;
+}
+#museumDoor .md-names .couple-amp,#closing .close-names .couple-amp{
+  font-family:'Great Vibes',cursive!important;
+  font-weight:400!important;
+}
+#closing .close-names .couple-script{display:inline-block;line-height:1.18}
+/* Name in the opened QR gift dialog. */
+#qrModalTitle{font-family:var(--couple-script-font)!important;font-weight:700!important;letter-spacing:0!important;text-transform:none!important}
+/* White-glass balloons instead of colored purple/pink; keep all 13 and their motion. */
+.floating-heart-balloons .love-air,
+.floating-heart-balloons .love-air:nth-child(3n+1),
+.floating-heart-balloons .love-air:nth-child(4n+2){
+  filter:drop-shadow(0 2px 4px rgba(255,255,255,.84)) drop-shadow(0 1px 2px rgba(143,160,178,.24))!important;
+  animation-name:balloonRise55!important;
+  opacity:.51;
+}
+@keyframes balloonRise55{
+  0%{transform:translate3d(0,0,0) rotate(-8deg);opacity:0}
+  12%{opacity:.53}
+  80%{opacity:.50}
+  100%{transform:translate3d(var(--sway,35px),-128vh,0) rotate(9deg);opacity:0}
+}
+@media(max-width:380px){
+  #portraitRoom .plaque h3.couple-script{font-size:clamp(1.24rem,5.1vw,1.72rem)!important}
+  #ceremonyRoom .cer-couple-name{font-size:1.6rem!important}
+}
+@media(prefers-reduced-motion:reduce){.floating-heart-balloons .love-air{animation:none!important;display:none!important}}
+
 </style>
 </head>
 <body>
 <svg class="kawaii-sprite" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" width="0" height="0" style="position:absolute;width:0;height:0;overflow:hidden">
   <defs>
+    <symbol id="lovely-balloon" viewBox="0 0 98 153">
+      <defs>
+        <linearGradient id="balloonIridescence" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0" stop-color="#ffffff" stop-opacity=".80"/>
+          <stop offset=".42" stop-color="#ffffff" stop-opacity=".30"/>
+          <stop offset=".73" stop-color="#f9feff" stop-opacity=".19"/>
+          <stop offset="1" stop-color="#f4fbff" stop-opacity=".34"/>
+        </linearGradient>
+      </defs>
+      <path d="M49 19 C33 -1 7 12 7 38 C7 65 33 85 49 102 C65 85 91 65 91 38 C91 12 65 -1 49 19 Z"
+            fill="url(#balloonIridescence)" stroke="#bdcbd5" stroke-opacity=".74" stroke-width="2.15"/>
+      <path d="M22 29 C17 38 18 51 24 59" fill="none" stroke="#fff" stroke-opacity=".99" stroke-linecap="round" stroke-width="5.4"/>
+      <path d="M48 101 l-4 7 10 0 z" fill="#f5fbff" fill-opacity=".76" stroke="#c4ceda" stroke-opacity=".55" stroke-width="1"/>
+      <path d="M49 109 Q41 122 49 132 Q58 143 49 153" fill="none" stroke="#c5cdda" stroke-opacity=".67" stroke-width="1.45"/>
+    </symbol>
     <symbol id="kawaii-bear" viewBox="0 0 180 205">
       <ellipse cx="90" cy="194" rx="59" ry="7" fill="#ab7f9a" opacity=".13"/>
       <circle cx="43" cy="51" r="27" fill="var(--fur,#d8ad91)" stroke="var(--outline,#ba8a80)" stroke-width="3.5"/>
@@ -4069,6 +4376,22 @@ html[data-theme] #rsvpRoom .wish{background:#fff7fa!important;border:2px solid #
     </symbol>
   </defs>
 </svg>
+<!-- Những bóng bay trái tim như bong bóng xà phòng: trang trí, không che nút bấm. -->
+<div class="floating-heart-balloons" aria-hidden="true">
+  <svg class="love-air love-air-1"><use href="#lovely-balloon"></use></svg>
+  <svg class="love-air love-air-2"><use href="#lovely-balloon"></use></svg>
+  <svg class="love-air love-air-3"><use href="#lovely-balloon"></use></svg>
+  <svg class="love-air love-air-4"><use href="#lovely-balloon"></use></svg>
+  <svg class="love-air love-air-5"><use href="#lovely-balloon"></use></svg>
+  <svg class="love-air love-air-6"><use href="#lovely-balloon"></use></svg>
+  <svg class="love-air love-air-7"><use href="#lovely-balloon"></use></svg>
+  <svg class="love-air love-air-8"><use href="#lovely-balloon"></use></svg>
+  <svg class="love-air love-air-9"><use href="#lovely-balloon"></use></svg>
+  <svg class="love-air love-air-10"><use href="#lovely-balloon"></use></svg>
+  <svg class="love-air love-air-11"><use href="#lovely-balloon"></use></svg>
+  <svg class="love-air love-air-12"><use href="#lovely-balloon"></use></svg>
+  <svg class="love-air love-air-13"><use href="#lovely-balloon"></use></svg>
+</div>
 <div class="bg-orb orb1"></div>
 <div class="bg-orb orb2"></div>
 
@@ -4081,7 +4404,7 @@ html[data-theme] #rsvpRoom .wish{background:#fff7fa!important;border:2px solid #
   <div class="md-copy" id="doorCopy">
     <div class="kawaii-door-pals" aria-hidden="true"><svg aria-hidden="true" focusable="false" class="kawaii-character kawaii-door-one kawaii--milk"><use href="#kawaii-bear"></use></svg><svg aria-hidden="true" focusable="false" class="kawaii-character kawaii-door-two kawaii--cocoa"><use href="#kawaii-bear"></use></svg><span class="kawaii-door-heart">♡</span></div>
     <div class="md-kicker">A LITTLE LOVE LETTER &nbsp; / &nbsp; 2026</div>
-    <div class="md-names">Nguyễn Nam <span>&amp;</span> Thân Hiền</div>
+    <div class="md-names"><span class="couple-script">Nguyễn Nam</span> <span class="couple-amp">&amp;</span> <span class="couple-script">Thân Hiền</span></div>
     <div class="md-date" id="doorEventDate">29 · 11 · 2026</div>
     <div class="md-note">Có một điều dễ thương muốn kể bạn nghe...<br/><strong>MỞ THIỆP YÊU THƯƠNG <span aria-hidden="true">↗</span></strong></div>
   </div>
@@ -4110,9 +4433,9 @@ html[data-theme] #rsvpRoom .wish{background:#fff7fa!important;border:2px solid #
     <div class="hero-card" id="heroCard" data-event-date="29  ·  11  ·  2026">
       <div class="hero-kicker" data-reveal>SAVE OUR SWEETEST DATE ♡</div>
       <h1 class="hero-title" data-reveal data-delay="1" aria-label="Nguyễn Nam và Thân Hiền">
-        <span class="hero-name hero-name--groom">Nguyễn Nam</span>
+        <span class="hero-name hero-name--groom couple-script">Nguyễn Nam</span>
         <span class="hero-ampersand" aria-hidden="true">&amp;</span>
-        <span class="hero-name hero-name--bride">Thân Hiền</span>
+        <span class="hero-name hero-name--bride couple-script">Thân Hiền</span>
       </h1>
       <div class="hero-date-line" id="heroDateLine">29 · 11 · 2026</div>
       <p class="hero-desc" data-reveal data-delay="2">Từ hai người xa lạ đến một nhà. Tụi mình rất mong có bạn ở bên trong ngày thật đặc biệt này! ♡</p>
@@ -4123,9 +4446,10 @@ html[data-theme] #rsvpRoom .wish{background:#fff7fa!important;border:2px solid #
       <span class="hero-meta-label" aria-hidden="true">OUR LITTLE MEMORIES</span>
       <div class="hero-photo-counter"><strong id="heroSlideCount">01</strong><span>／</span><span id="heroSlideTotal">18</span></div>
       <div class="hero-progress-track" aria-hidden="true"><span id="heroProgress"></span></div>
+      <span class="sr-only" id="heroSlideStatus" role="status" aria-live="polite">Ảnh 1 trong 18</span>
       <div class="hero-controls">
-        <button type="button" id="heroPrev" class="hero-control" aria-label="Ảnh cưới trước">‹</button>
-        <button type="button" id="heroNext" class="hero-control" aria-label="Ảnh cưới tiếp theo">›</button>
+        <button type="button" id="heroPrev" class="hero-control" aria-label="Xem ảnh cưới trước"><span aria-hidden="true">←</span><span>Trước</span></button>
+        <button type="button" id="heroNext" class="hero-control" aria-label="Xem ảnh cưới tiếp theo"><span>Sau</span><span aria-hidden="true">→</span></button>
       </div>
     </div>
     <div class="scroll">⌄</div>
@@ -4166,11 +4490,12 @@ html[data-theme] #rsvpRoom .wish{background:#fff7fa!important;border:2px solid #
           <div class="pocket-greeting"><span>💌</span> THIỆP MỜI NHỎ XINH</div>
           <div class="ticket-label">TRÂN TRỌNG KÍNH MỜI</div>
           <div class="guest-name" id="guestName">Quý Khách</div>
-          <p class="ticket-text">Đến chung vui ngày cưới của <strong>Nguyễn Nam &amp; Thân Hiền</strong> ♡</p>
+          <p class="ticket-text">Đến chung vui ngày cưới của</p>
+          <div class="ticket-couple-names" aria-label="Nguyễn Nam và Thân Hiền"><span class="couple-script">Nguyễn Nam</span><em>&amp;</em><span class="couple-script">Thân Hiền</span> <i aria-hidden="true">♡</i></div>
         </div>
         <div class="ticket-foot">
-          <div><b id="ticketDate">29.11.2026</b><span>NGÀY HẠNH PHÚC</span></div>
-          <div><b id="ticketTime">Giờ sẽ cập nhật</b><span>GIỜ ĐÓN KHÁCH</span></div>
+          <div><b id="ticketDate">29.11.2026</b><span>CHỦ NHẬT · NGÀY HẠNH PHÚC</span><small class="ticket-lunar">Âm lịch: 21/10/2026</small></div>
+          <div><b id="ticketTime">10:00 sáng</b><span>GIỜ ĐÓN KHÁCH ♡</span></div>
         </div>
         <div class="pocket-footer" aria-hidden="true"><span>♡ made with love ♡</span><svg aria-hidden="true" focusable="false" class="kawaii-character pocket-footer-bear kawaii--milk"><use href="#kawaii-bear"></use></svg></div>
       </div>
@@ -4182,10 +4507,10 @@ html[data-theme] #rsvpRoom .wish{background:#fff7fa!important;border:2px solid #
     <span class="room-no" data-reveal>CHƯƠNG 01 · HẸN MỘT NGÀY THƯƠNG</span>
     <span class="room-title" data-reveal data-delay="1">Our Special <em>Day</em></span>
     <span class="room-script" data-reveal data-delay="2">Ngày ngọt ngào nhất</span>
-    <p class="room-sub" id="dateRoomText" data-reveal data-delay="3">Chủ Nhật, ngày 29 tháng 11 năm 2026 — thời khắc chúng mình mong được đón bạn đến chung vui.</p>
+    <p class="room-sub" id="dateRoomText" data-reveal data-delay="3">Chủ Nhật, 29/11/2026 · 10:00 sáng (âm lịch 21/10/2026) — tụi mình mong bạn đến chung vui.</p>
     <div class="calendar-card" data-reveal="zoom" data-delay="4">
       <div class="calendar-pal" aria-hidden="true"><svg aria-hidden="true" focusable="false" class="kawaii-character  kawaii--cocoa"><use href="#kawaii-bear"></use></svg><span>Hẹn bạn nhé!</span></div>
-      <div class="date-cute-banner" aria-label="Ngày cưới 29 tháng 11 năm 2026"><svg aria-hidden="true" focusable="false" class="kawaii-character kawaii--milk"><use href="#kawaii-bear"></use></svg><div class="date-cute-message"><span>♡ TỤI MÌNH VỀ CHUNG MỘT NHÀ ♡</span><strong>29.11.2026</strong><small>Chủ Nhật · Ngày mình thành đôi 💗</small></div><svg aria-hidden="true" focusable="false" class="kawaii-character kawaii--lavender"><use href="#kawaii-bunny"></use></svg></div>
+      <div class="date-cute-banner" aria-label="Ngày cưới 29 tháng 11 năm 2026"><svg aria-hidden="true" focusable="false" class="kawaii-character kawaii--milk"><use href="#kawaii-bear"></use></svg><div class="date-cute-message"><span>♡ TỤI MÌNH VỀ CHUNG MỘT NHÀ ♡</span><strong>29.11.2026</strong><small>10:00 sáng · 21/10/2026 âm lịch 💗</small></div><svg aria-hidden="true" focusable="false" class="kawaii-character kawaii--lavender"><use href="#kawaii-bunny"></use></svg></div>
       <div class="month-head"><span class="month-side">♡ LITTLE LOVE</span><strong>Tháng 11 <em>2026</em></strong><span class="month-side">SWEET DAY ✿</span></div>
       <div class="cal-grid" aria-label="Lịch tháng 11 năm 2026, ngày cưới 29 được đánh dấu">
         <div class="dow">T2</div><div class="dow">T3</div><div class="dow">T4</div><div class="dow">T5</div><div class="dow">T6</div><div class="dow">T7</div><div class="dow">CN</div>
@@ -4219,20 +4544,20 @@ html[data-theme] #rsvpRoom .wish{background:#fff7fa!important;border:2px solid #
         <div class="portrait-photo"><img src="2.webp" alt="Chân dung cô dâu Thân Hiền" loading="lazy" decoding="async"/></div>
         <div class="plaque">
           <span class="portrait-role">Cô dâu</span>
-          <h3>Thân Hiền</h3>
+          <h3 class="couple-script">Thân Hiền</h3>
           <span class="portrait-caption">SWEET BRIDE <i aria-hidden="true">✧</i> OUR LOVE STORY</span>
         </div>
-        <span class="portrait-corner" aria-hidden="true">01 / 02</span>
+        
       </article>
       <div class="portrait-bridge" aria-hidden="true"><span>LOVE ♡ LOVE</span></div>
       <article class="portrait portrait--groom" data-reveal="right" data-delay="1">
         <div class="portrait-photo"><img src="4.webp" alt="Chân dung chú rể Nguyễn Nam" loading="lazy" decoding="async"/></div>
         <div class="plaque">
           <span class="portrait-role">Chú rể</span>
-          <h3>Nguyễn Nam</h3>
+          <h3 class="couple-script">Nguyễn Nam</h3>
           <span class="portrait-caption">SWEET GROOM <i aria-hidden="true">✧</i> OUR LOVE STORY</span>
         </div>
-        <span class="portrait-corner" aria-hidden="true">02 / 02</span>
+        
       </article>
     </div>
     <div class="wall-caption" data-reveal data-delay="2">
@@ -4254,8 +4579,8 @@ html[data-theme] #rsvpRoom .wish{background:#fff7fa!important;border:2px solid #
         <div class="cer-info">
           <div class="cer-label">01 / GROOM’S CELEBRATION</div>
           <h2 class="cer-title">Tiệc cưới <em>Nhà Trai</em></h2>
-          <div class="cer-row"><div class="cer-ico">◷</div><div><b id="groomEventDate">Chủ Nhật, 29/11/2026</b><span id="groomEventTime">Giờ đón khách sẽ cập nhật</span></div></div>
-          <div class="cer-row"><div class="cer-ico">⌖</div><div><b>Nhà Trai · Nguyễn Nam</b><span>Nhà văn hóa Mi Điền 2 - Phường Nếnh - Bắc Ninh</span></div></div>
+          <div class="cer-row"><div class="cer-ico">◷</div><div><b id="groomEventDate">Chủ Nhật, 29/11/2026 · 21/10 âm lịch</b><span id="groomEventTime">Đón khách lúc 10:00 sáng</span></div></div>
+          <div class="cer-row"><div class="cer-ico">⌖</div><div><b>Nhà Trai · <span class="couple-script cer-couple-name">Nguyễn Nam</span></b><span>Nhà văn hóa Mi Điền 2 - Phường Nếnh - Bắc Ninh</span></div></div>
           <div class="cer-actions"><a href="https://www.google.com/maps/search/?api=1&amp;query=Nh%C3%A0%20v%C4%83n%20h%C3%B3a%20Mi%20%C4%90i%E1%BB%81n%202%20-%20Ph%C6%B0%E1%BB%9Dng%20N%E1%BA%BFnh%20-%20B%E1%BA%AFc%20Ninh" target="_blank" rel="noopener">⌖ &nbsp; Chỉ đường</a><a href="#" id="calGroom">＋ &nbsp; Thêm lịch</a></div>
         </div>
       </article>
@@ -4265,8 +4590,8 @@ html[data-theme] #rsvpRoom .wish{background:#fff7fa!important;border:2px solid #
         <div class="cer-info">
           <div class="cer-label">02 / BRIDE’S CELEBRATION</div>
           <h2 class="cer-title">Tiệc cưới <em>Nhà Gái</em></h2>
-          <div class="cer-row"><div class="cer-ico">◷</div><div><b id="brideEventDate">Chủ Nhật, 29/11/2026</b><span id="brideEventTime">Giờ đón khách sẽ cập nhật</span></div></div>
-          <div class="cer-row"><div class="cer-ico">⌖</div><div><b>Nhà Gái · Thân Hiền</b><span>Giếng Đông TDP Phúc Long - Phường Nếnh - Bắc Ninh</span></div></div>
+          <div class="cer-row"><div class="cer-ico">◷</div><div><b id="brideEventDate">Chủ Nhật, 29/11/2026 · 21/10 âm lịch</b><span id="brideEventTime">Đón khách lúc 10:00 sáng</span></div></div>
+          <div class="cer-row"><div class="cer-ico">⌖</div><div><b>Nhà Gái · <span class="couple-script cer-couple-name">Thân Hiền</span></b><span>Giếng Đông TDP Phúc Long - Phường Nếnh - Bắc Ninh</span></div></div>
           <div class="cer-actions"><a href="https://www.google.com/maps/search/?api=1&amp;query=Gi%E1%BA%BFng%20%C4%90%C3%B4ng%20TDP%20Ph%C3%BAc%20Long%20-%20Ph%C6%B0%E1%BB%9Dng%20N%E1%BA%BFnh%20-%20B%E1%BA%AFc%20Ninh" target="_blank" rel="noopener">⌖ &nbsp; Chỉ đường</a><a href="#" id="calBride">＋ &nbsp; Thêm lịch</a></div>
         </div>
       </article>
@@ -4364,6 +4689,8 @@ html[data-theme] #rsvpRoom .wish{background:#fff7fa!important;border:2px solid #
     <div class="kinetic-gallery" id="kineticGallery" tabindex="0" role="region" aria-roledescription="Trình chiếu ảnh" aria-label="Album ảnh cưới tương tác, vuốt hoặc nhấn mũi tên để đổi ảnh" data-reveal="zoom">
       <div class="machine-top"><span class="machine-indicator"><i></i> LOVEBOT / READY ♡</span><span class="machine-counter" id="robotCounter">01 / 09</span></div>
       <div class="robotic-stage">
+        <button type="button" class="robot-stage-arrow robot-stage-arrow--prev" aria-label="Xem ảnh robot trước">←</button>
+        <button type="button" class="robot-stage-arrow robot-stage-arrow--next" aria-label="Xem ảnh robot tiếp theo">→</button>
         <div class="machine-rail machine-rail--top" aria-hidden="true"></div>
         <div class="machine-rail machine-rail--bottom" aria-hidden="true"></div>
         <div class="robot-arm robot-arm--left" aria-hidden="true"><div class="robot-shoulder"></div><div class="robot-limb"></div><div class="robot-joint"></div><div class="robot-gripper"><i></i><i></i></div></div>
@@ -4384,9 +4711,9 @@ html[data-theme] #rsvpRoom .wish{background:#fff7fa!important;border:2px solid #
         <span class="robot-date" id="robotGalleryDate">29.11.2026</span>
       </div>
       <div class="robot-nav">
-        <button id="robotPrev" type="button" aria-label="Xem ảnh trước">← <span>Ảnh trước</span></button>
+        <button id="robotPrev" type="button" aria-label="Robot xem ảnh trước"><span aria-hidden="true">←</span> <span>Ảnh trước</span></button>
         <div class="robot-dots" id="robotDots" aria-label="Tiến trình album"></div>
-        <button id="robotNext" type="button" aria-label="Xem ảnh tiếp theo"><span>Ảnh sau</span> →</button>
+        <button id="robotNext" type="button" aria-label="Robot xem ảnh tiếp theo"><span>Ảnh sau</span> <span aria-hidden="true">→</span></button>
       </div>
       <p class="robot-help">ROBOT TỰ KỂ CHUYỆN ♡ CHẠM MŨI TÊN HOẶC VUỐT ẢNH</p>
     </div>
@@ -4433,6 +4760,7 @@ html[data-theme] #rsvpRoom .wish{background:#fff7fa!important;border:2px solid #
     <span class="room-title" data-reveal data-delay="1">Say Yes! ♡</span>
     <span class="room-script" data-reveal data-delay="2">Xác nhận tham dự</span>
     <p class="room-sub" data-reveal data-delay="3">Để tụi mình biết bạn có đến chung vui không nha! Và nếu có điều gì dễ thương muốn nhắn gửi, tụi mình sẽ giữ thật kỹ. 💌</p>
+    <a class="rsvp-preview-link" href="#giftRoom">♡ Thiệp còn một trang xinh nữa: Phong bì yêu thương <span aria-hidden="true">↓</span></a>
     <div class="rsvp-cuddle" aria-hidden="true"><svg aria-hidden="true" focusable="false" class="kawaii-character  kawaii--milk"><use href="#kawaii-bear"></use></svg><span>Mình chờ lời nhắn của bạn đó! ♡</span></div>
     <div class="rsvp-card" data-reveal data-delay="4">
       <div class="field"><label>Họ và tên</label><input id="rname" placeholder="Tên khách mời từ đường link"/><small class="guest-hint" id="guestHint">Tên này được lấy tự động từ tham số guest trên đường link.</small></div>
@@ -4454,6 +4782,11 @@ html[data-theme] #rsvpRoom .wish{background:#fff7fa!important;border:2px solid #
         <div class="wish-state" id="wishState">Đang tải lời chúc từ sổ cưới...</div>
       </div>
     </div>
+    <a class="rsvp-keep-going" href="#giftRoom" aria-label="Cuộn tiếp đến lời cảm ơn và lời hẹn từ chúng mình">
+      <span class="rsvp-keep-icon" aria-hidden="true">💌</span>
+      <span class="rsvp-keep-copy"><strong>Khoan đi nè, còn một lời cảm ơn ♡</strong><small>Cuộn thêm chút nữa để nhận lời cảm ơn và lời hẹn gặp của tụi mình nhé!</small></span>
+      <span class="rsvp-keep-arrow" aria-hidden="true">↓</span>
+    </a>
   </section>
 
   <section id="giftRoom" class="sec">
@@ -4467,14 +4800,14 @@ html[data-theme] #rsvpRoom .wish{background:#fff7fa!important;border:2px solid #
       <article class="gift-person" id="giftBride">
         <div class="gift-module" aria-hidden="true">LOVE ENVELOPE <span>◈</span></div>
         <small>Cô dâu</small>
-        <h3>Thân Hiền</h3>
+        <h3 class="couple-script">Thân Hiền</h3>
         <button class="gift-toggle" type="button" data-qr="qr_than_hien.webp" data-person="Cô dâu Thân Hiền" data-note="Quét mã QR để gửi quà mừng tới cô dâu Thân Hiền">Xem mã quà mừng &nbsp; ↗</button>
         <p class="gift-hint">Mã QR sẽ chỉ xuất hiện khi bạn chạm mở.</p>
       </article>
       <article class="gift-person" id="giftGroom">
         <div class="gift-module" aria-hidden="true">LOVE ENVELOPE <span>◈</span></div>
         <small>Chú rể</small>
-        <h3>Nguyễn Nam</h3>
+        <h3 class="couple-script">Nguyễn Nam</h3>
         <button class="gift-toggle" type="button" data-qr="qr_nguyen_nam.webp" data-person="Chú rể Nguyễn Nam" data-note="Quét mã QR để gửi quà mừng tới chú rể Nguyễn Nam">Xem mã quà mừng &nbsp; ↗</button>
         <p class="gift-hint">Mã QR sẽ chỉ xuất hiện khi bạn chạm mở.</p>
       </article>
@@ -4485,10 +4818,10 @@ html[data-theme] #rsvpRoom .wish{background:#fff7fa!important;border:2px solid #
     <img class="close-bg" src="hero.webp" alt="Thank you" loading="lazy" decoding="async"/>
     <div class="close-filter"></div>
     <div class="close-content">
-      <div class="close-room" id="closingEventDate" data-reveal>Hẹn gặp bạn · 29.11.2026</div>
+      <div class="close-room" id="closingEventDate" data-reveal>Hẹn gặp bạn · 10:00 sáng · 29.11.2026</div>
       <div class="close-thanks" data-reveal data-delay="1">Cảm ơn bạn ♡</div>
       <p class="close-note" data-reveal data-delay="2">Mỗi câu chuyện đẹp đều cần những người thương bên cạnh.<br/>Cảm ơn bạn đã là một phần trong hành trình yêu thương của chúng mình.</p>
-      <div class="close-names" data-reveal data-delay="2">Nguyễn Nam <span>&amp;</span> Thân Hiền</div>
+      <div class="close-names" data-reveal data-delay="2"><span class="couple-script">Nguyễn Nam</span> <span class="couple-amp">&amp;</span> <span class="couple-script">Thân Hiền</span></div>
       <div class="closing-teddy-pair" aria-hidden="true"><svg aria-hidden="true" focusable="false" class="kawaii-character kawaii--cocoa"><use href="#kawaii-bear"></use></svg><svg aria-hidden="true" focusable="false" class="kawaii-character kawaii--milk"><use href="#kawaii-bear"></use></svg><span>hugs & kisses ♡</span></div>
       <div class="close-actions" data-reveal data-delay="3">
         <a href="#hero">↥ &nbsp; Về trang đầu</a>
@@ -4523,22 +4856,22 @@ html[data-theme] #rsvpRoom .wish{background:#fff7fa!important;border:2px solid #
 
 <script>
 // Dán URL Web App sau khi Deploy Google Apps Script vào đây.
-// Ví dụ: AKfycbyT_kxHxRLP5G0dTSOEBJtOE1MK_7tga2D98UJ6OfH5KIY6jF4HfYlk92_iDYriVbTvGg
-const GOOGLE_SCRIPT_URL='https://script.google.com/macros/s/AKfycbyT_kxHxRLP5G0dTSOEBJtOE1MK_7tga2D98UJ6OfH5KIY6jF4HfYlk92_iDYriVbTvGg/exec'; // Dán URL Web App /exec sau khi deploy Code.gs đi kèm.
+// Lưu ý: phải dùng Google Apps Script của cặp đôi này, không sử dụng đường dẫn cũ.
+const GOOGLE_SCRIPT_URL=''; // ĐIỀN URL Google Apps Script RIÊNG cho cặp đôi này trước khi mở đồng bộ lời chúc.
 
 // Ngày cưới mới: 29/11/2026. Link cá nhân hóa: ?guest=Ten-Khach-Moi
-// Giờ đón khách chưa được cung cấp, vì vậy lịch Google được lưu dạng cả ngày.
+// Giờ đón khách: 10:00 sáng (Việt Nam); âm lịch do gia đình cung cấp: 21/10/2026.
 const EVENT_CONFIG={
   '29':{
     key:'29',
-    start:'2026-11-29T00:00:00+07:00',
-    end:'2026-11-30T00:00:00+07:00',
-    allDay:true,
-    allDayStart:'20261129',
-    allDayEnd:'20261130',
-    time:'Giờ sẽ cập nhật',
+    start:'2026-11-29T10:00:00+07:00',
+    end:'2026-11-29T11:00:00+07:00', // khoảng nhắc lịch, không có nghĩa tiệc kết thúc lúc 11 giờ
+    allDay:false,
+    allDayStart:'20261129T100000',
+    allDayEnd:'20261129T110000',
+    time:'10:00 sáng',
     day:'29',month:'11',year:'2026',
-    dateSlash:'29/11/2026',dateDot:'29.11.2026',
+    dateSlash:'29/11/2026',dateDot:'29.11.2026',lunar:'21/10/2026',
     weekday:'Chủ Nhật',
     heroDate:'29  ·  11  ·  2026',
     ticketCode:'INV-291126'
@@ -4585,16 +4918,16 @@ function applyEventDetails(){
   const card=document.getElementById('heroCard');if(card)card.dataset.eventDate=EVENT.heroDate;
   setText('ticketCode',EVENT.ticketCode+' · LOVE LETTER');
   setText('ticketDate',EVENT.dateDot);
-  setText('ticketTime','Sẽ thông báo');
-  setText('dateRoomText','Chủ Nhật, ngày 29 tháng 11 năm 2026 — tụi mình rất mong được đón bạn đến chung vui! ♡');
-  setText('groomEventDate','Chủ Nhật, 29/11/2026');
-  setText('brideEventDate','Chủ Nhật, 29/11/2026');
-  setText('groomEventTime','Giờ đón khách sẽ cập nhật');
-  setText('brideEventTime','Giờ đón khách sẽ cập nhật');
+  setText('ticketTime',EVENT.time);
+  setText('dateRoomText','Chủ Nhật, 29/11/2026 · 10:00 sáng (âm lịch 21/10/2026). Tụi mình rất mong được đón bạn đến chung vui! ♡');
+  setText('groomEventDate','Chủ Nhật, 29/11/2026 · 21/10 âm lịch');
+  setText('brideEventDate','Chủ Nhật, 29/11/2026 · 21/10 âm lịch');
+  setText('groomEventTime','Đón khách lúc 10:00 sáng');
+  setText('brideEventTime','Đón khách lúc 10:00 sáng');
   setText('journeyEventDate',EVENT.dateDot+' · CHỦ NHẬT');
   setText('galleryDate',EVENT.dateDot);
   setText('robotGalleryDate',EVENT.dateDot);
-  setText('closingEventDate','Hẹn gặp bạn · '+EVENT.dateDot);
+  setText('closingEventDate','Hẹn gặp bạn · 10:00 sáng · '+EVENT.dateDot);
 }
 applyEventDetails();
 
@@ -4643,17 +4976,15 @@ heroProgress.style.setProperty('--hero-hold',HERO_DWELL_MS+'ms');
 function heroCanMove(){return museumOpened&&heroInView&&!document.hidden&&!heroReduceMotion.matches&&HERO_IMAGE_FILES.length>1}
 function pauseHeroProgress(){heroProgress.classList.remove('running');heroProgress.style.transform='scaleX(0)'}
 function startHeroProgress(){
-  heroProgress.classList.remove('running');
-  heroProgress.style.transform='';
-  void heroProgress.offsetWidth; // Replay the progress line only after image settles.
+  heroProgress.classList.remove('running');heroProgress.style.transform='';
+  void heroProgress.offsetWidth;
   heroProgress.classList.add('running');
 }
 function scheduleHeroSlide(){
-  clearTimeout(heroTimer);
-  pauseHeroProgress();
+  clearTimeout(heroTimer);pauseHeroProgress();
   if(!heroCanMove()||heroIsTransitioning)return;
   startHeroProgress();
-  heroTimer=setTimeout(()=>advanceHeroSlide(1),HERO_DWELL_MS);
+  heroTimer=setTimeout(()=>advanceHeroSlide(1,false),HERO_DWELL_MS);
 }
 function prepareHeroPhoto(index){
   if(heroMissing.has(index))return Promise.resolve(false);
@@ -4662,7 +4993,7 @@ function prepareHeroPhoto(index){
   const promise=new Promise(resolve=>{
     const image=new Image();let settled=false;
     const end=ok=>{if(settled)return;settled=true;clearTimeout(timeout);resolve(ok)};
-    const timeout=setTimeout(()=>end(false),9000);
+    const timeout=setTimeout(()=>end(false),4500);
     image.onload=()=>{
       if(typeof image.decode==='function')image.decode().then(()=>end(true)).catch(()=>end(image.naturalWidth>0));
       else end(true);
@@ -4677,63 +5008,65 @@ function prepareHeroPhoto(index){
   heroLoaded.set(index,promise);
   return promise;
 }
-async function advanceHeroSlide(direction=1){
-  if(!heroCanMove()||heroIsTransitioning)return;
-  clearTimeout(heroTimer);
-  pauseHeroProgress();
+let heroQueuedDirection=0;
+const heroStatus=document.getElementById('heroSlideStatus');
+async function advanceHeroSlide(direction=1,manual=false){
+  if(HERO_IMAGE_FILES.length<2||!museumOpened)return;
+  if(heroIsTransitioning){if(manual)heroQueuedDirection=direction;return;}
+  if(!manual&&!heroCanMove())return;
+  clearTimeout(heroTimer);pauseHeroProgress();
   heroIsTransitioning=true;
+  heroStatus.textContent=manual?'Đang chọn ảnh...':'Đang chuyển ảnh...';
   let next=-1;
   for(let step=1;step<HERO_IMAGE_FILES.length;step++){
     const idx=(heroCurrentFile+direction*step+HERO_IMAGE_FILES.length*2)%HERO_IMAGE_FILES.length;
     if(heroMissing.has(idx))continue;
     if(await prepareHeroPhoto(idx)){next=idx;break;}
   }
-  if(next===-1||!heroCanMove()){
+  if(next===-1||(!manual&&!heroCanMove())){
     heroIsTransitioning=false;
-    scheduleHeroSlide();
-    return;
+    heroStatus.textContent='Hãy đặt ảnh 1.webp – 18.webp cùng thư mục với thiệp nhé ♡';
+    scheduleHeroSlide();return;
   }
   const former=heroImages[heroCurrentLayer];
   const incoming=heroImages[1-heroCurrentLayer];
   incoming.classList.remove('is-active','motion-1','motion-2','motion-3');
   incoming.src=HERO_IMAGE_FILES[next];
   incoming.classList.add(`motion-${next%3+1}`);
-  incoming.style.zIndex='2';
-  former.style.zIndex='1';
-  // 2 frames ensure opacity transition begins only AFTER the decoded photo is painted.
+  incoming.style.zIndex='2';former.style.zIndex='1';
+  const fade=manual||heroReduceMotion.matches?520:HERO_CROSSFADE_MS;
+  incoming.style.transitionDuration=fade+'ms';
+  former.style.transitionDuration=fade+'ms';
   requestAnimationFrame(()=>requestAnimationFrame(()=>{
-    if(!heroCanMove()){
-      incoming.classList.remove('is-active');
-      heroIsTransitioning=false;
-      scheduleHeroSlide();
-      return;
+    if(!manual&&!heroCanMove()){
+      incoming.classList.remove('is-active');heroIsTransitioning=false;
+      scheduleHeroSlide();return;
     }
-    heroRoot.classList.remove('is-changing');
-    void heroRoot.offsetWidth;
     heroRoot.classList.add('is-changing');
-    incoming.classList.add('is-active');
-    former.classList.remove('is-active');
+    incoming.classList.add('is-active');former.classList.remove('is-active');
     setTimeout(()=>{
       former.style.zIndex='0';
       heroRoot.classList.remove('is-changing');
-      heroCurrentLayer=1-heroCurrentLayer;
-      heroCurrentFile=next;
+      heroCurrentLayer=1-heroCurrentLayer;heroCurrentFile=next;
       document.getElementById('heroSlideCount').textContent=String(next+1).padStart(2,'0');
+      heroStatus.textContent=`Ảnh ${next+1} trong ${HERO_IMAGE_FILES.length}`;
       heroIsTransitioning=false;
       scheduleHeroSlide();
-      // Next image is fetched in spare time rather than during fade.
-      if(heroCanMove())prepareHeroPhoto((next+1)%HERO_IMAGE_FILES.length);
-    },HERO_CROSSFADE_MS+60);
+      prepareHeroPhoto((next+1)%HERO_IMAGE_FILES.length);
+      if(heroQueuedDirection){
+        const queued=heroQueuedDirection;heroQueuedDirection=0;
+        advanceHeroSlide(queued,true);
+      }
+    },fade+50);
   }));
 }
 function startHeroSlideshow(){
-  if(heroCanMove()){
-    prepareHeroPhoto((heroCurrentFile+1)%HERO_IMAGE_FILES.length);
-  }
+  if(heroCanMove())prepareHeroPhoto((heroCurrentFile+1)%HERO_IMAGE_FILES.length);
   scheduleHeroSlide();
 }
-document.getElementById('heroNext').addEventListener('click',()=>advanceHeroSlide(1));
-document.getElementById('heroPrev').addEventListener('click',()=>advanceHeroSlide(-1));
+// Manual controls always work on desktop & phone regardless of auto-play settings.
+document.getElementById('heroNext').addEventListener('click',e=>{e.preventDefault();e.stopPropagation();advanceHeroSlide(1,true)});
+document.getElementById('heroPrev').addEventListener('click',e=>{e.preventDefault();e.stopPropagation();advanceHeroSlide(-1,true)});
 const heroVisibilityObserver=new IntersectionObserver(([entry])=>{
   heroInView=entry.isIntersecting;
   // Giữ cover như một bìa album sạch: thanh gửi lời chúc chỉ hiện khi rời ảnh bìa.
@@ -4768,7 +5101,7 @@ document.querySelectorAll('[data-reveal]').forEach(el=>obs.observe(el));
   const stories=['Ngày ấy mình gặp nhau','Những ngày bình yên','Một nụ cười, một lời hẹn','Chạm vào hạnh phúc','Cùng nhau lớn lên','Mình đã chọn nhau','Chỉ cần có nhau','Câu chuyện vẫn tiếp tục','Và mãi về sau'];
   const reduced=window.matchMedia('(prefers-reduced-motion: reduce)');
   const cache=new Map();
-  let current=0,busy=false,visible=false,timer=0,pointerStart=null;
+  let current=0,busy=false,visible=false,timer=0,pointerStart=null,queuedRequest=null;
   const total=galleryFiles.length;
   const prefetch=(idx)=>{
     if(cache.has(idx))return cache.get(idx);
@@ -4794,13 +5127,13 @@ document.querySelectorAll('[data-reveal]').forEach(el=>obs.observe(el));
   }
   function ready(){clearTimeout(timer);if(!visible||document.hidden||reduced.matches||!museumOpened)return;timer=setTimeout(()=>goTo(current+1),7000)}
   async function goTo(request){
-    if(busy)return;
-    const idx=(request+total)%total;
+    if(busy){queuedRequest=request;return;}
+    const idx=(request%total+total)%total;
     if(idx===current){ready();return}
     busy=true;clearTimeout(timer);
     // Decode before animating: the robotic shutter never shows an empty photo.
     const ok=await prefetch(idx);
-    if(!ok){busy=false;ready();return;}
+    if(!ok){busy=false;photo.alt='Chưa có tệp '+galleryFiles[idx]+' trong thư mục ảnh';ready();return;}
     root.classList.add('is-transferring');
     const wait=reduced.matches?0:380;
     setTimeout(()=>{
@@ -4809,7 +5142,10 @@ document.querySelectorAll('[data-reveal]').forEach(el=>obs.observe(el));
       current=idx;setLabel(idx);
       root.classList.remove('is-transferring');
       root.classList.add('is-delivered');
-      setTimeout(()=>{root.classList.remove('is-delivered');busy=false;prefetch((idx+1)%total);ready()},reduced.matches?0:750);
+      setTimeout(()=>{
+        root.classList.remove('is-delivered');busy=false;prefetch((idx+1)%total);ready();
+        if(queuedRequest!==null){const request=queuedRequest;queuedRequest=null;goTo(request)}
+      },reduced.matches?0:450);
     },wait);
   }
   document.querySelectorAll('.archive-tile').forEach(tile=>{
@@ -4822,6 +5158,8 @@ document.querySelectorAll('[data-reveal]').forEach(el=>obs.observe(el));
   });
   document.getElementById('robotNext').addEventListener('click',()=>goTo(current+1));
   document.getElementById('robotPrev').addEventListener('click',()=>goTo(current-1));
+  document.querySelector('.robot-stage-arrow--prev').addEventListener('click',()=>goTo(current-1));
+  document.querySelector('.robot-stage-arrow--next').addEventListener('click',()=>goTo(current+1));
   root.addEventListener('keydown',e=>{
     if(e.key==='ArrowRight'||e.key==='ArrowLeft'){
       e.preventDefault();goTo(current+(e.key==='ArrowRight'?1:-1));
@@ -4864,14 +5202,14 @@ audio.addEventListener('pause',setMusicState);
 audio.addEventListener('ended',setMusicState);
 setMusicState();
 
-/* Calendar links: all-day until hour is confirmed (no made-up schedule). */
+/* Calendar reminder starts at actual welcome time, 10 AM Asia/Ho_Chi_Minh. End is only a 1h reminder slot, not end of wedding. */
 function calendarUrl(title,description,venue){
   return 'https://calendar.google.com/calendar/render?action=TEMPLATE&text='+encodeURIComponent(title)+
-    '&dates='+EVENT.allDayStart+'/'+EVENT.allDayEnd+'&details='+encodeURIComponent(description)+
+    '&dates='+EVENT.allDayStart+'/'+EVENT.allDayEnd+'&ctz=Asia%2FHo_Chi_Minh&details='+encodeURIComponent(description)+
     '&location='+encodeURIComponent(venue);
 }
-document.getElementById('calGroom').href=calendarUrl('Tiệc cưới Nhà Trai - Nguyễn Nam & Thân Hiền','Ngày cưới 29/11/2026 · Giờ đón khách sẽ được thông báo.', 'Nhà văn hóa Mi Điền 2 - Phường Nếnh - Bắc Ninh');
-document.getElementById('calBride').href=calendarUrl('Tiệc cưới Nhà Gái - Nguyễn Nam & Thân Hiền','Ngày cưới 29/11/2026 · Giờ đón khách sẽ được thông báo.', 'Giếng Đông TDP Phúc Long - Phường Nếnh - Bắc Ninh');
+document.getElementById('calGroom').href=calendarUrl('Tiệc cưới Nhà Trai - Nguyễn Nam & Thân Hiền','Đón khách lúc 10:00 sáng, Chủ Nhật 29/11/2026 (âm lịch 21/10/2026). Lịch nhắc 1 giờ, không phải giờ kết thúc tiệc.', 'Nhà văn hóa Mi Điền 2 - Phường Nếnh - Bắc Ninh');
+document.getElementById('calBride').href=calendarUrl('Tiệc cưới Nhà Gái - Nguyễn Nam & Thân Hiền','Đón khách lúc 10:00 sáng, Chủ Nhật 29/11/2026 (âm lịch 21/10/2026). Lịch nhắc 1 giờ, không phải giờ kết thúc tiệc.', 'Giếng Đông TDP Phúc Long - Phường Nếnh - Bắc Ninh');
 
 /* Journey progress */
 const jp=document.getElementById('journeyProgress');
@@ -5343,7 +5681,7 @@ document.getElementById('moreHeart').addEventListener('click',()=>{
   }
   document.addEventListener('click',e=>{
     if(!e.isTrusted)return;
-    const target=e.target.closest('#museumDoor,#robotNext,#robotPrev,.archive-tile,#playBtn,#sendQuick,#sendRsvp,#heartBtn,#moreHeart,.gift-toggle,#heroNext,#heroPrev');
+    const target=e.target.closest('#museumDoor,#robotNext,#robotPrev,.archive-tile,#playBtn,#sendQuick,#sendRsvp,#heartBtn,#moreHeart,.gift-toggle,.robot-stage-arrow,.rsvp-keep-going,#heroNext,#heroPrev');
     if(!target)return;
     const r=target.getBoundingClientRect();
     puff(e.clientX||r.left+r.width/2,e.clientY||r.top+r.height/2,target.id==='museumDoor'?12:7);
